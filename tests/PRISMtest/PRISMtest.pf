@@ -1,0 +1,15 @@
+@test
+subroutine test_Ikind
+    use pfunit_mod
+    use LMFR_THmods, only: Ikind2
+    implicit none
+    @assertTrue(Ikind == 4)
+end subroutine test_Ikind
+
+@test
+subroutine test_Dkind
+    use pfunit_mod
+    use LMFR_THmods, only: Dkind
+    implicit none
+    @assertFalse(Dkind == 16)
+end subroutine test_Dkind

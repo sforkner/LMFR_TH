@@ -1,0 +1,8 @@
+!  PRISM Driver Fuel rated Conditions        
+!   DFUinch        DCLinch    Sinch     HPinch     Hinch    DWWinch
+     0.2830         0.3270   0.3911       8.00     32.00     0.0620
+!   GIN         TIN          PIN
+  2.84687D+6     680.0        150.0
+!   QTP0        HEinch         OP
+ 7.41661D+7      44.00          1
+!  end of input

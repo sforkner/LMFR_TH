@@ -6,7 +6,7 @@ MODULE THProperties
   ! +----------------------------------------------------------------+
   USE DefineKinds, ONLY: Ikind, Dkind
   USE ConstantsConversions, ONLY: DensityConvert, DynViscosityC,      &
-  &                               F2Kconvert, K2Fconvert,             &
+  &                               F2K=>F2KConvert,  K2F=>K2FConvert,  &
   &                               SpecificHeatC, TconductivityC
   USE SodiumTHProperties, ONLY: K_Na, VIS_Na, Rhol_Na, Cp_Na, Tsat_Na
   USE UmetalTHProperties, ONLY: K_U
@@ -29,7 +29,7 @@ CONTAINS
     !
     ! T = Temperature (Deg F)
     ! TK = Temperature (Deg K)
-    TK = F2Kconvert(T)
+    TK = F2K(T)
     ! Temperature dependant function for fuel conductivity
     IF (UO2) THEN
        ! K_MOX is W/(m-Deg K) convert to BTU/(Hr ft-Deg F) by
@@ -51,7 +51,7 @@ CONTAINS
     !
     ! T = Temperature (Deg F)
     ! TK = Temperature (Deg K)
-    TK = F2Kconvert(T)
+    TK = F2K(T)
     ! Temperature dependant function for clad conductivity
     ! K_SS is W/(m-Deg K) convert to BTU/(Hr ft-Deg F) by
     ! multiplying by  Conversion factor TconductivityC
@@ -67,7 +67,7 @@ CONTAINS
     !
     ! T = Temperature (Deg F)
     ! TK = Temperature (Deg K)
-    TK = F2Kconvert(T)
+    TK = F2K(T)
     ! Temperature dependant function for coolant conductivity
     ! K_Na is W/(m-Deg K) convert to BTU/(Hr ft-Deg F) by
     ! multiplying by  Conversion factor TconductivityC
@@ -83,7 +83,7 @@ CONTAINS
     !
     ! T = Temperature (Deg F)
     ! TK = Temperature (Deg K)
-    TK = F2Kconvert(T)
+    TK = F2K(T)
     ! Temperature dependant function for Coolant viscosity
     ! VIS_Na is (Kg/(m s)convert to lb/(ft Hr) by multipling
     ! by conversion factor DynViscosityC
@@ -99,7 +99,7 @@ CONTAINS
     !
     ! T = Temperature (Deg F)
     ! TK = Temperature (Deg K)
-    TK = F2Kconvert(T)
+    TK = F2K(T)
     ! Temperature dependant function for Coolant density
     ! Rho_Na is Kg/m**3 convert to lb/ft**3 by multipling
     ! by conversion factor DensityConvert
@@ -115,7 +115,7 @@ CONTAINS
     !
     ! T = Temperature (Deg F)
     ! TK = Temperature (Deg K)
-    TK = F2Kconvert(T)
+    TK = F2K(T)
     ! Temperature dependant function for Coolant specific heat
     ! Cp_Na is kJ/(Kg DegK) convert to BTU/(Lb DegF) by multiplying
     ! by conversion factor  SpecificHeatC
@@ -133,7 +133,7 @@ CONTAINS
     ! P = local pressure (psia)
     ! Tsat_Na returns temperature in Deg K and is not a function of pressure
     ! convert to Deg F
-    TSAT = K2Fconvert(Tsat_Na())
+    TSAT = K2F(Tsat_Na())
     !
     RETURN
   END FUNCTION TSAT

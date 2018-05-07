@@ -1,0 +1,7 @@
+!
+! weight fraction of PuO2 in MOX
+! fuel burnup (MWd/tU)
+! weight fraction of PuO2 in MOX
+! oxygen to metal ratio in MOX
+! fraction MOX melted
+! MOX fraction of theoretical density

@@ -196,7 +196,7 @@ CONTAINS
     REAL (Dkind) D, FCOMP, FBu, Y, X, T, AA, BB, TRM1, TRM2,        &
          &            TRM2a, TRM2b
     !
-    ! D = fration of theoretical density
+    ! D = fraction of theoretical density
     ! FCOMP = weight fraction of PuO2 in MOX
     ! FBu = fuel burnup (MWd/tU)
     ! Y = oxygen to metal ratio in MOX

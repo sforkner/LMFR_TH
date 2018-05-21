@@ -5,18 +5,18 @@ MODULE CaseInfo
   ! |                                                                |
   ! +----------------------------------------------------------------+
   USE DefineKinds, ONLY: FileInfo, Ikind, Lkind, Dkind, FileInfo
+  USE ConstantsConversions, ONLY:  INCHESPERFT
   IMPLICIT NONE
   !
   INTEGER (Ikind)  ninput, noutput
   REAL (Dkind) DFU, DCL, S, HP, H, DWW, GIN, TIN, PIN, QTP0, HE,       &
-       &            DFUinch, DCLinch, Sinch, HPinch, Hinch, HEinch, DWWinch
+       &            DFUinch, DCLinch, Sinch, HPinch, Hinch, HEinch,    &
+       &            DWWinch
   !
   INTEGER (Ikind), PRIVATE :: i, io
   CHARACTER (Len=132) card, title
   CHARACTER (Len=1), PARAMETER :: exclam = "!", quote = "'"
   CHARACTER (Len=1) :: Yes
-  REAL (Dkind), PARAMETER :: PI = 3.141592654, INCHESPERFT = 12.0,     &
-       &  GSUBC = 32.2, SQINPERSQFT =144.0, SECPERHR = 3600.0
   TYPE (FileInfo), DIMENSION(2) :: Files
   !
   !  DFU       = Fuel pellet outer diameter (feet)

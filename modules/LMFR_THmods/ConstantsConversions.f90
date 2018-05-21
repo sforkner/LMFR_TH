@@ -39,7 +39,15 @@ MODULE  ConstantsConversions
   REAL (kind=Dkind), PARAMETER :: AccelGravity = 32.1740_Dkind
   ! Avagrado's Number (atoms or molecules)/(Mole)
   REAL (kind=Dkind), PARAMETER :: Avagrado = 6.02214D23
-  !
+  ! Inches per Foot to
+  REAL (kind=Dkind), PARAMETER :: INCHESPERFT = 12.0_Dkind
+  ! Conversion between mass and force units: (lbsubm - ft)/(lbsubf sec**2)
+  REAL (kind=Dkind), PARAMETER :: GSUBC = 32.2_Dkind
+  ! Square Inches per Square foot conversion factor (in**2/ft**2)
+  REAL (kind=Dkind), PARAMETER :: SQINPERSQFT =144.0_Dkind
+  ! Seconds per Hour conversion (sec/hr)
+  REAL (kind=Dkind), PARAMETER :: SECPERHR = 3600.0_Dkind
+  
 CONTAINS
 
   REAL(Dkind) FUNCTION  F2Kconvert(temperature)

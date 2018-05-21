@@ -6,10 +6,10 @@ MODULE Calculations
   !+-------------------------------------------------------------------+
   !
   USE DefineKinds, ONLY: Ikind, Dkind
+  USE ConstantsConversions, ONLY: GSUBC, PI, SECPERHR, SQINPERSQFT
   !
   USE CaseInfo, ONLY:  DFU, DCL, S, HP, H, GIN, TIN, PIN, QTP0, HE,     &
-       &                    PI, noutput, INCHESPERFT, GSUBC, SQINPERSQFT,    &
-       &                    SECPERHR, DWW
+       &                    noutput, DWW
   USE THProperties, ONLY: KFU, KCL, KBC, VIS, RHO, CP, TSAT
   USE Debugs, ONLY: InletDebug
   !
